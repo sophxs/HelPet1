@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lemon&family=Sarabun&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+  --primary-color: #4F7478;
+  --descrito: #6A6A6A;
+  --entrar-cadastro: #F3F4F5;
+  --entrar-hv: #c9c9c9;
+  --saiba-mais: #dddddd;
+
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("./assets/fundo-1.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 50%;
+  padding: 2rem;
+}
+
+.nome {
+  font-family: 'Lemon', cursive;
+  font-weight: 400;
+  font-size: 6vh;
+  color: var(--primary-color);
+}
+
+.entrar {
+  width: 20.5vh;
+  height: 6.3vh;
+  background: var(--entrar-cadastro);
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 3.5vh;
+
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 3vh;
+  color: var(--primary-color);
+
+  cursor: pointer;
+}
+
+.entrar:hover {
+  background: var(--entrar-hv);
+}
+
+.principal {
+  display: flex;
+  max-width: 45%;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 4rem;
+  padding: 5rem;
+  gap: 3.2rem;
+}
+
+.titulo {
+  font-family: 'Lemon', cursive;
+  font-weight: 400;
+  font-size: 6.5vh;
+  color: var(--primary-color);
+}
+
+.descricao {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 3vh;
+  color: var(--descrito);
+  max-width: 80%;
+}
+
+.botao {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-left: 5rem;
+}
+
+.saiba-mais {
+  width: 19.6vh;
+  height: 6.3vh;
+  background: var(--saiba-mais);
+  border: none;
+  border-radius: 2.5vh;
+    
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 3vh;
+  color: var(--primary-color);
+
+  cursor: pointer;
+}
+
+.cadastro {
+  width: 19.6vh;
+  height: 6.3vh;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 2.5vh;
+    
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 3vh;
+  color: var(--entrar-cadastro);
+
+  cursor: pointer;
+}
+
+.saiba-mais:hover {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+}
+
+.cadastro:hover {
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+}
+
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(208, 208, 208, 0.3);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-content {
+  width: 45%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("./assets/Vectore.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.fechar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.modal-campos {
+  width: 30vw;
+}
+
+.texto {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-family: 'Lemon', cursive;
+  font-weight: 400;
+  color: var(--entrar-cadastro);
+  justify-self: center;
+  font-size: 5vw;
+}
+
+form .input{
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: var(--entrar-cadastro);
+  font-size: 1vw;
+}
+
+.input {
+  display: flex;
+  max-width: 100%;
+  gap: 0.5rem;
+  background: var(--primary-color);
+  border: 2px solid var(--entrar-hv);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--entrar-hv);
+}
+
+.input i {
+  font-size: 1.5vw;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--entrar-cadastro);
+  opacity: 40%;
+}
+
+#username, #password {
+  text-decoration: none;
+  color: var(--entrar-cadastro);
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.continuar {
+  width: 14vw;
+  height: 4vw;
+
+  background: var(--entrar-cadastro);
+  border-radius: 2rem;
+  border: none;
+
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 2vw;
+  color: var(--primary-color);
+
+  cursor: pointer;
+}
+
+.continuar:hover {
+  background: var(--entrar-hv);
+  letter-spacing: 0.2rem;
+}
+
+.esqueceu-senha {
+  width: 20vw;
+  height: 4vw;
+
+  background: #4F7478;
+  border: 1px solid #F3F4F5;
+  border-radius: 1.5rem;
+
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 1.7vw;
+  color: var(--saiba-mais);
+
+  cursor: pointer;
+}
+
+.esqueceu-senha:hover {
+  background: var(--primary-color);
+  letter-spacing: 0.2rem;
+  border: none;
+}
+
+.alternativa {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alternativa legend {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 2.7rem;
+  color: #F3F4F5;
+}
+
+fieldset {
+  border-top: 1px solid #F3F4F5;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  display: block;
+  text-align: center;
+}
+
+fieldset legend {
+  padding: 0.5rem 1rem;
+}
+
+@media (min-width: 1190px) {
+
+  .modal-content {
+    width: 43%;
+  }
+}
+
+@media (min-width: 1230px) {
+
+  .modal-content {
+    width: 42%;
+  }
+}
+
+@media (min-width: 1300px) {
+
+  .modal-content {
+    width: 41%;
+  }
+}
+
