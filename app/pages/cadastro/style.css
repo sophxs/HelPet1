@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lemon&family=Sarabun&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /* 1rem = 10px */
+  --primary-color: #4F7478;
+  --secundary-color: #6A6A6A;
+  --terciary-color: #F3F4F5;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("fundo.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 50%;
+  margin-left: 50%;
+  padding: 2rem;
+}
+
+.nome {
+  font-family: 'Lemon', cursive;
+  font-weight: 400;
+  font-size: 6vh;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50%;
+  margin-top: 6%;
+  gap: 2rem;
+}
+
+.texto {
+  font-family: 'Lemon', cursive;
+  font-weight: 400;
+  color: var(--primary-color);
+  font-size: 6vh;
+}
+
+form .input{
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  color: var(--primary-color);
+  font-size: 2.5vh
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  width: 50vh;
+  gap: 0.5rem;
+  background: var(--terciary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 1vh;
+  padding: 0.7rem;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: var(--secundary-color);
+}
+
+.input i {
+  font-size: 2.5vh;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--secundary-color);
+  opacity: 70%;
+}
+
+#username, #email, #password {
+  text-decoration: none;
+  color: var(--secundary-color);
+  font-weight: 600;
+}
+
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.continuar {
+  width: 20vh;
+  height: 7vh;
+
+  background: var(--primary-color);
+  border-radius: 3.5vh;
+  border: none;
+
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 3.2vh;
+  color: var(--terciary-color);
+  cursor: pointer;
+}
+
+.continuar:hover {
+  background: #293b3d;
+  letter-spacing: 0.5px;
+}
+

@@ -1,0 +1,4 @@
+/venv
+/oracle
+database.sql
+__pycache__/
